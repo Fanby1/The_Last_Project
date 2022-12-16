@@ -18,4 +18,8 @@
   <build>
     <finalName>The_Last_Project</finalName>
   </build>
+  <properties>
+    <maven.compiler.source>12</maven.compiler.source>
+    <maven.compiler.target>12</maven.compiler.target>
+  </properties>
 </project>

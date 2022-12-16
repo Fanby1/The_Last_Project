@@ -9,7 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="sql 封装" />
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="AES 封装">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,18 +70,27 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/fanby/Downloads/mariadb-java-client-3.1.0.jar",
+    "last_opened_file_path": "C:/Users/fanby/IdeaProjects/The_Last_Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.editor",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp" />
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="The_last_project" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-18">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -174,7 +190,7 @@
       <updated>1671108138424</updated>
       <workItem from="1671108139620" duration="2843000" />
       <workItem from="1671111002780" duration="2212000" />
-      <workItem from="1671165982714" duration="16372000" />
+      <workItem from="1671165982714" duration="24169000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -197,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671187406315</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="AES 封装">
+      <created>1671187795956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671187795956</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +229,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="所有文件框架，四个页面" />
     <MESSAGE value="sql 封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql 封装" />
+    <MESSAGE value="AES 封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="AES 封装" />
   </component>
 </project>

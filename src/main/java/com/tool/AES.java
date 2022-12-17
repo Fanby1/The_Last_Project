@@ -1,3 +1,5 @@
+package com.tool;
+
 public class AES {
 
     String key;

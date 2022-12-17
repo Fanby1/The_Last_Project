@@ -1,3 +1,5 @@
+package com.tool;
+
 import java.sql.*;
 
 public class SQL {

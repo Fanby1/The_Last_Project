@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="带高亮提示的起始页，顺道解决了javx的问题">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="登录界面格式确定">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tool/UserToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
@@ -188,7 +189,7 @@
       <workItem from="1671111002780" duration="2212000" />
       <workItem from="1671165982714" duration="26066000" />
       <workItem from="1671289675242" duration="275000" />
-      <workItem from="1671289959369" duration="22470000" />
+      <workItem from="1671289959369" duration="29231000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -232,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671302325689</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="登录界面格式确定">
+      <created>1671350807044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671350807044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +263,7 @@
     <MESSAGE value="AES 封装" />
     <MESSAGE value="bootstrap 本地样式库，解决了cdn不稳健的问题" />
     <MESSAGE value="带高亮提示的起始页，顺道解决了javx的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="带高亮提示的起始页，顺道解决了javx的问题" />
+    <MESSAGE value="登录界面格式确定" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录界面格式确定" />
   </component>
 </project>

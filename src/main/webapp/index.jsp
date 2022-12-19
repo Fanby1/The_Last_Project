@@ -11,13 +11,6 @@
     <title>bootstrap起步</title>
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="dist/js/bootstrap.bundle.min.js"></script>
-    <%
-        String state = "none";
-        String temp = request.getParameter("state");
-        if (temp != "") {
-            state = temp;
-        }
-    %>
 </head>
 <body>
 <div class="container mt-3">
@@ -96,7 +89,7 @@
                                         <div class="form-check mb-3">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="checkbox" name="remember">
-                                                Remember me
+                                                是否在此设备上记住此账户
                                             </label>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -350,6 +343,27 @@
         </div>
     </div>
 </div>
+<script>
+    function save(account, type, password) {
+        if(typeof(Storage) !== "undefined") {
+            update("account",account);
+            update("type", type);
+            update("password", password);
+        } else {
+            alert("您的浏览器不支持存储账户与密码，请放弃勾选‘记住我’选项再次登录");
+        }
+    }
 
+    function update(type, val){
+        if(typeof(Storage) !== "undefined"){
+            if(localStorage.getItem(type)){
+                localStorage.removeItem(type);
+                localStorage.setItem(type, val);
+            }else{
+                localStorage.setItem(type,val);
+            }
+        }
+    }
+</script>
 </body>
 </html>

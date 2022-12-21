@@ -189,7 +189,8 @@
       <workItem from="1671165982714" duration="26066000" />
       <workItem from="1671289675242" duration="275000" />
       <workItem from="1671289959369" duration="29231000" />
-      <workItem from="1671424276366" duration="14439000" />
+      <workItem from="1671424276366" duration="14459000" />
+      <workItem from="1671602722851" duration="8556000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -247,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671424385614</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="实现记住用户功能（未完全完成）">
+      <created>1671445587595</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671445587595</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

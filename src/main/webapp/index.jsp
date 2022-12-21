@@ -13,348 +13,89 @@
     <script src="dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body onload="login()">
-<div class="container mt-3">
+
+<div class="container">
     <div class="row">
-        <div class="col-3">
-            <h2>选项卡切换</h2>
-            <br>
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills" role="tablist" id="accountTypeNav">
-                <div class="container">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="pill" href="#homePage" id="homeTab">Home</a>
-                    </li>
+        <div class="col-8 offset-2">
+            <h2>大爷来玩啊</h2>
+            <form action="" id="1">
+                <div class="mb-3 mt-3">
+                    <label for="account" class="form-label">账号:</label>
+                    <input type="text" class="form-control" id="account"
+                           placeholder="手机/邮箱/ID:" name="account" onchange="checkAccount()">
+                    <p id="accountWarning"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">密码:</label>
+                    <input type="password" class="form-control" id="password"
+                           placeholder="密码:" name="pswd" oninput="checkPassword()">
+                    <br>
+                    <p id="passwordWarning"></p>
                 </div>
                 <div class="container">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="pill" href="#teacherPage" id="teacherTab">教师登录界面</a>
-                    </li>
-                </div>
-                <div class="container">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="pill" href="#managerPage" id="managerTab">管理员登录界面</a>
-                    </li>
-                </div>
-                <div class="container">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="pill" href="#liaisonPage"
-                           id="liaisonTab">学院联络员登录界面</a>
-                    </li>
-                </div>
-
-            </ul>
-        </div>
-
-        <!-- Tab panes -->
-        <div class="col-9">
-            <div class="tab-content">
-                <div id="homePage" class="container tab-pane fade"><br>
-                    <h3>欢迎来到核算填报网站</h3>
-                    <p>请根据您的身份选择登录界面</p>
-                </div>
-                <div id="teacherPage" class="container tab-pane fade"><br>
-                    <h3>教师</h3>
-                    <div class="container">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#teacherIdPage" id="teacherIdTab">
-                                    使用ID登录
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#teacherEmailPage" id="teacherEmailTab">
-                                    使用Email登录
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#teacherPhonePage" id="teacherPhoneTab">
-                                    使用电话登录
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="teacherIdPage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用ID登录</h2>
-                                    <form action="" id="teacherIdSubmit">
-                                        <div class="mb-3 mt-3">
-                                            <label for="teacherIdVal" class="form-label">学号:</label>
-                                            <input type="text" class="form-control" id="teacherIdVal"
-                                                   placeholder="Enter Id" name="Id">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="teacherPwdWithId" class="form-label">密码:</label>
-                                            <input type="password" class="form-control" id="teacherPwdWithId"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember"
-                                                       value="remember" id="teacherIdCheckbox">
-                                                是否在此设备上记住此账户
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary"
-                                                onclick="check('teacher','id')">
-                                            Submit
-                                        </button>
-                                    </form>
-                                </div>
+                    <div class="row">
+                        <div class="col-2 offset-10">
+                            <label class="form-check-label float-end" for="identity">请选择你的身份</label>
+                        </div>
+                    </div>
+                    <div class="row" id="identity">
+                        <div class="col-2 offset-6">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="teacher" name="identity"
+                                       value="teacher" checked>教师
+                                <label class="form-check-label" for="teacher"></label>
                             </div>
-                            <div id="teacherEmailPage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用邮箱登录</h2>
-                                    <form action="" id="teacherEmailSubmit">
-                                        <div class="mb-3 mt-3">
-                                            <label for="teacherEmailVal" class="form-label">Email:</label>
-                                            <input type="email" class="form-control" id="teacherEmailVal"
-                                                   placeholder="Enter email" name="email">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="teacherPwdWithEmail" class="form-label">Password:</label>
-                                            <input type="password" class="form-control" id="teacherPwdWithEmail"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember"
-                                                       value="remember" id="teacherEmailCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary"
-                                                onclick="check('teacher','email')">
-                                            Submit
-                                        </button>
-                                    </form>
-                                </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="liaison" name="identity"
+                                       value="liaison">联络员
+                                <label class="form-check-label" for="liaison"></label>
                             </div>
-                            <div id="teacherPhonePage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用手机登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="teacherPhoneVal" class="form-label">电话:</label>
-                                            <input type="text" class="form-control" id="teacherPhoneVal"
-                                                   placeholder="Enter phone"
-                                                   name="phone">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="teacherPwdWithPhone" class="form-label">Password:</label>
-                                            <input type="password" class="form-control" id="teacherPwdWithPhone"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="teacherPhoneCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary"
-                                                onclick="check('teacher','phone')">
-                                            Submit
-                                        </button>
-                                    </form>
-                                </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="manager" name="identity"
+                                       value="manager">管理员
+                                <label class="form-check-label" for="manager"></label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="managerPage" class="container tab-pane fade"><br>
-                    <h3>管理员</h3>
-                    <div class="container">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#managerIdPage">
-                                    使用ID登录
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#managerEmailPage">
-                                    使用Email登录
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#managerPhonePage">
-                                    使用电话登录
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="managerIdPage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用ID登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="managerIdVal" class="form-label">学号:</label>
-                                            <input type="text" class="form-control" id="managerIdVal"
-                                                   placeholder="Enter Id" name="Id">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="managerPwdWithId" class="form-label">密码:</label>
-                                            <input type="password" class="form-control" id="managerPwdWithId"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="managerIdCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" onclick="check('manager', 'id')">Submit</button>
-                                    </form>
-                                </div>
+                <div class="form-check mb-4 offset-8">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"
+                               value="remember" id="remember">
+                        是否在此设备上记住此账户
+                    </label>
+                </div>
+                <div class="container d-none">
+                    <div class="row" id="type">
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="email" name="type"
+                                       value="email">
                             </div>
-                            <div id="managerEmailPage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用邮箱登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="managerEmailVal" class="form-label">Email:</label>
-                                            <input type="email" class="form-control" id="managerEmailVal"
-                                                   placeholder="Enter email" name="email">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="managerPwdWithEmail" class="form-label">Password:</label>
-                                            <input type="password" class="form-control" id="managerPwdWithEmail"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="managerEmailCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" onclick="check('manager','email')">Submit</button>
-                                    </form>
-                                </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="phone" name="type"
+                                       value="phone">
                             </div>
-                            <div id="managerPhonePage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用手机登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="managerPhoneVal" class="form-label">电话:</label>
-                                            <input type="text" class="form-control" id="managerPhoneVal"
-                                                   placeholder="Enter phone"
-                                                   name="phone">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="managerPwdWithPhone" class="form-label">Password:</label>
-                                            <input type="password" class="form-control" id="managerPwdWithPhone"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="managerPhoneCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" onclick="check('manager', 'phone')">Submit</button>
-                                    </form>
-                                </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="id" name="type"
+                                       value="id">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="liaisonPage" class="container tab-pane fade"><br>
-                    <h3>联络员</h3>
-                    <div class="container">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#LiaisonIdPage">
-                                    使用ID登录
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#liaisonEmailPage">
-                                    使用Email登录
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#liaisonPhonePage">
-                                    使用电话登录
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="LiaisonIdPage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用ID登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="liaisonIdVal" class="form-label">学号:</label>
-                                            <input type="text" class="form-control" id="liaisonIdVal"
-                                                   placeholder="Enter Id" name="Id">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="liaisonPwdWithId" class="form-label">密码:</label>
-                                            <input type="password" class="form-control" id="liaisonPwdWithId"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="liaisonIdCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" onclick="check('liaison','id')">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div id="liaisonEmailPage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用邮箱登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="liaisonEmailVal" class="form-label">Email:</label>
-                                            <input type="email" class="form-control" id="liaisonEmailVal"
-                                                   placeholder="Enter email" name="email">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="liaisonPwdWithEmail" class="form-label">Password:</label>
-                                            <input type="password" class="form-control" id="liaisonPwdWithEmail"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="liaisonEmailCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" onclick="check('liaison','email')">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div id="liaisonPhonePage" class="container tab-pane fade"><br>
-                                <div class="container mt-3">
-                                    <h2>使用手机登录</h2>
-                                    <form action="">
-                                        <div class="mb-3 mt-3">
-                                            <label for="liaisonPhoneVal" class="form-label">电话:</label>
-                                            <input type="text" class="form-control" id="liaisonPhoneVal"
-                                                   placeholder="Enter phone"
-                                                   name="phone">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="liaisonPwdWithPhone" class="form-label">Password:</label>
-                                            <input type="password" class="form-control" id="liaisonPwdWithPhone"
-                                                   placeholder="Enter password" name="pswd">
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="liaisonPhoneCheckbox">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" onclick="check('liaison','phone')">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <button type="submit" class="btn btn-primary"
+                        onclick="return check()">
+                    Submit
+                </button>
+            </form>
         </div>
     </div>
 </div>
@@ -367,64 +108,172 @@
     }
 
     //此函数在查找到历史账户后自动切换到目标页面 type 是key d 是默认活动页面
-    function login(){
-        var accountType = localStorage.getItem("accountType") == null ? "home" : localStorage.getItem("accountType");
-        var type = localStorage.getItem("type") == null ? "" : localStorage.getItem("accountType");
-        var tab = getTab(accountType, "");
-        var page = getPage(accountType, "");
-        var element = document.getElementById(tab);
-        element.className += ' active';
-        element = document.getElementById(page);
-        element.className += " show active";
+    function login() {
+        var accountType = localStorage.getItem("accountType") == null ? "" : localStorage.getItem("accountType");
+        var type = localStorage.getItem("type") == null ? "" : localStorage.getItem("type");
 
-        if(type != "") {
-            tab = getTab(localStorage.getItem("type"),accountType);
-            page = getPage(localStorage.getItem("type"),accountType);
-            element = document.getElementById(tab);
-            element.className += " active";
-            element = document.getElementById(page);
-            element.className += " show active";
-            var account = document.getElementById(getAccountId(accountType, type));
+        if (type != "" && accountType != "") {
+            var account = document.getElementById("account");
             account.value = localStorage.getItem("account");
-            var pwd = document.getElementById(getPasswordId(accountType, type));
+            var pwd = document.getElementById("password");
             pwd.value = localStorage.getItem("password");
-            var checkbox = document.getElementById(getCheckboxId(accountType,type));
+            var checkbox = document.getElementById("remember");
             checkbox.checked = true;
+            var identify = document.getElementsByName("identity");
+            for (var i = 0; i < identify.length; i++) {
+                if (identify[i].value == accountType) {
+                    identify[i].checked = true;
+                }
+            }
+            var enterType = document.getElementsByName("type");
+            for (var i = 0; i < identify.length; i++) {
+                if (enterType[i].value == type) {
+                    enterType[i].checked = true;
+                }
+            }
         }
     }
 
-    function check(accountType,type){
-        var account = document.getElementById(getAccountId(accountType,type));
-        var psw = document.getElementById(getPasswordId(accountType,type));
-        var checkbox = document.getElementById(getCheckboxId(accountType,type));
-        if(account.value.trim() == '' || psw.value.trim() == ''){
-            alert("账户或密码不能为空");
-            return;
+    var email = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+    var phone = /^[1][3,4,5,7,8][0-9]{9}$/;
+    var id = /^[0-9]{8}$/;
+    var errorEmail1 = /[0-9a-zA-Z]*@[0-9a-zA-Z]*/
+    var errorEmail2 = /[a-zA-Z_-]+/
+    var erroPhone = /^[0-9]{11}$/;
+
+    function summit() {
+
+    }
+
+    function checkAccount() {
+        var account = document.getElementById("account");
+        var accountWarning = document.getElementById("accountWarning");
+        if (email.test(account.value.trim())) {
+            accountWarning.className = "bg-success text-wight";
+            accountWarning.innerHTML = "您输入了正确的邮箱";
+            return 1;
+        } else if (phone.test(account.value.trim())) {
+            accountWarning.className = "bg-success text-wight";
+            accountWarning.innerHTML = "您输入了正确的手机";
+            return 2;
+        } else if (id.test(account.value.trim())) {
+            accountWarning.className = "bg-success text-wight";
+            accountWarning.innerHTML = "您输入了正确的id";
+            return 3;
+        } else if (errorEmail1.test(account.value.trim()) || errorEmail2.test(account.value.trim())) {
+            accountWarning.className = "bg-warning text-white";
+            accountWarning.innerHTML = "您输入了错误的账号格式，您可能想输入邮箱";
+            return -1;
+        } else if (erroPhone.test(account.value.trim())) {
+            accountWarning.className = "bg-warning text-white";
+            accountWarning.innerHTML = "您输入了错误的账号格式，您可能想输入手机";
+            return -1;
+        } else {
+            accountWarning.className = "bg-warning text-white";
+            accountWarning.innerHTML = "您输入了错误的账号格式";
+            return -1;
         }
-        if (checkbox.checked){
-            saveForever(account.value.trim(),type,psw.value.trim(), accountType);
-        }else{
+    }
+
+
+    function checkPassword() {
+        var password = document.getElementById("password").value.trim();
+        var username = document.getElementById("account").value.trim();
+        let iRank = 0;
+        var passwordWarning = document.getElementById("passwordWarning");
+        password.match(/[a-z]/g) && iRank++;
+        password.match(/[A-Z]/g) && iRank++;
+        password.match(/[0-9]/g) && iRank++;
+        password.match(/[^a-zA-Z0-9]/g) && iRank++;
+        iRank = iRank > 3 ? 3 : iRank;
+        if (
+            password.length < 8 ||
+            iRank === 1 ||
+            (username != "" && (
+                password.includes(username) ||
+                password.includes(username.split('').reverse().join(''))))
+        ) {
+            iRank = 0;
+        }
+        if (iRank === 2) {
+            if (
+                (password.match(/[0-9]/g) && password.match(/[a-z]/g)) ||
+                (password.match(/[0-9]/g) && password.match(/[A-Z]/g))
+            ) {
+                iRank = 1;
+            }
+        }
+        if (password.match(/[^0-9a-zA-Z]/)) {
+            iRank = -1;
+        }
+        switch (iRank) {
+            case 0:
+                passwordWarning.className = "bg-danger text-white";
+                passwordWarning.innerHTML = "您的密码太弱";
+                return false;
+            case 1:
+                passwordWarning.className = "bg-warning text-white";
+                passwordWarning.innerHTML = "您的密码较弱";
+                return true;
+            case 2:
+                passwordWarning.className = "bg-info text-white";
+                passwordWarning.innerHTML = "您的密码较强";
+                return true;
+            case 3:
+                passwordWarning.className = "bg-success text-white";
+                passwordWarning.innerHTML = "您的密码很强";
+                return true;
+            default:
+                passwordWarning.className = "bg-danger text-white";
+                passwordWarning.innerHTML = "密码不能含有特殊字符";
+                return false;
+        }
+    }
+
+    function check() {
+        var account = document.getElementById("account");
+        var psw = document.getElementById("password");
+        var checkbox = document.getElementById("remember");
+        var accountType = document.getElementsByName("identity");
+        var type = document.getElementsByName("type");
+
+        if (account.value.trim() == '' || psw.value.trim() == '') {
+            alert("账户或密码不能为空");
+            return false;
+        }
+        var typeVal = "";
+        var accountTypeVal = ""
+        for (var i = 0; i < 3; i++) {
+            if (accountType[i].checked) {
+                accountTypeVal = accountType[i].value;
+            }
+        }
+
+        if (checkAccount() < 0 || checkPassword() !== true) {
+            return false;
+        }
+
+        var typelist = ["email", "phone", "id"];
+        alert(checkAccount() - 1);
+        alert(typelist[checkAccount() - 1]);
+        typeVal = typelist[checkAccount() - 1];
+        alert(typeVal);
+
+        for (let i = 0; i < type.length; i++) {
+            if (type[i].value == typeVal) {
+                alert(type[i].value);
+                type[i].checked = true;
+            }
+        }
+
+
+        if (checkbox.checked) {
+            saveForever(account.value.trim(), typeVal, psw.value.trim(), accountTypeVal);
+        } else {
             clear();
         }
     }
 
-    function upFirstChar(word) {
-        return word.charAt(0).toUpperCase()
-            + word.slice(1);
-    }
-
-    function getPage(value, path) {
-        //alert((path ? path + upFirstChar(value) : value) + 'Page');
-        return (path ? path + upFirstChar(value) : value) + 'Page';
-    }
-
-    function getTab(value, path) {
-        return (path ? path + upFirstChar(value) : value) + 'Tab';
-    }
-
-    function getSubmit(value, path) {
-        return (path ? path + upFirstChar(value) : value) + 'Submit';
-    }
     function saveForever(account, type, password, accountType) {
         if (typeof (Storage) !== "undefined") {
             update("account", account);
@@ -445,28 +294,6 @@
                 localStorage.setItem(key, val);
             }
         }
-    }
-
-    function getValue(name) {
-        var obj = document.getElementsByName(name);
-        var s = '';
-        for (var i = 0; i < obj.length; i++) {
-            s += obj[i].value;
-        }
-        //alert(s);
-        return s;
-    }
-
-    function getPasswordId(accountType,type){
-        return accountType + "PwdWith" + upFirstChar(type);
-    }
-
-    function getAccountId(accountType,type){
-        return accountType + upFirstChar(type) + "Val";
-    }
-
-    function getCheckboxId(accountType,type){
-        return accountType + upFirstChar(type) + "Checkbox";
     }
 </script>
 </body>

@@ -28,7 +28,7 @@
             </ul>
             <div class="tab-content">
                 <div id="loginPage" class="tab-pane fade active container show"><br>
-                    <form action="" id="1">
+                    <form action="login" id="1" method="post">
                         <div class="mb-3 mt-3">
                             <label for="account" class="form-label">账号:</label>
                             <input type="text" class="form-control" id="account"
@@ -40,7 +40,7 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">密码:</label>
                             <input type="password" class="form-control" id="password"
-                                   placeholder="密码:" name="pswd" oninput="checkPassword()">
+                                   placeholder="密码:" name="password" oninput="checkPassword()">
                             <br>
                             <div class="card d-none" id="passwordWarning">
                                 <div class="card-body" id="passwordWarningBody"></div>
@@ -112,7 +112,7 @@
                     </form>
                 </div>
                 <div id="registerPage" class="tab-pane fade container">
-                    <form action="" id="2">
+                    <form action="" id="2" method="post">
                         <div class="mb-3 mt-3">
                             <label for="account" class="form-label">账号:</label>
                             <input type="text" class="form-control" id="accountRegister"
@@ -394,14 +394,10 @@
         }
 
         var typelist = ["email", "phone", "id"];
-        alert(checkAccount() - 1);
-        alert(typelist[checkAccount() - 1]);
         typeVal = typelist[checkAccount() - 1];
-        alert(typeVal);
 
         for (let i = 0; i < type.length; i++) {
             if (type[i].value == typeVal) {
-                alert(type[i].value);
                 type[i].checked = true;
             }
         }
@@ -439,14 +435,10 @@
         }
 
         var typelist = ["email", "phone", "id"];
-        alert(checkAccount() - 1);
-        alert(typelist[checkAccount() - 1]);
         typeVal = typelist[checkAccount() - 1];
-        alert(typeVal);
 
         for (let i = 0; i < type.length; i++) {
             if (type[i].value == typeVal) {
-                alert(type[i].value);
                 type[i].checked = true;
             }
         }

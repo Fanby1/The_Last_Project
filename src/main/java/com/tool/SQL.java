@@ -52,20 +52,20 @@ public class SQL {
     public SQL(String name, String password){
         this.userName = name;
         this.userPassword = password;
-        this.dbType = "mariadb";
+        this.dbType = "mysql";
         this.dbName = "";
         setConfig();
     }
 
     private void setConfig(){
-        this.url ="jdbc:" + dbType + "://localhost/" + dbName;
+        this.url ="jdbc:" + dbType + "://localhost:3306/" + dbName;
         this.driverName = "com."+ dbType + ".jdbc.driver";
     }
-    public int connect() throws SQLException {
+    public int connect() throws SQLException, ClassNotFoundException {
         if(dbName.equals("")) {
             return -1;
         }
-        connection.close();
+        Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager.getConnection(url,userName,userPassword);
         return 0;
     }

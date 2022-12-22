@@ -9,10 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="实现记住用户功能">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="实现记住用户功能(改变ui后版本)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tool/loginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/SQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -67,12 +72,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/fanby/IdeaProjects/The_Last_Project",
+    "last_opened_file_path": "C:/Users/fanby/IdeaProjects/The_Last_Project/src/main/lib/mariadb-java-client-3.1.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.completion",
@@ -84,8 +90,9 @@
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\lib" />
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
@@ -269,12 +276,35 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -289,7 +319,8 @@
     <MESSAGE value="登录界面格式确定" />
     <MESSAGE value="实现记住用户功能（未完全完成）" />
     <MESSAGE value="实现记住用户功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现记住用户功能" />
+    <MESSAGE value="实现记住用户功能(改变ui后版本)" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现记住用户功能(改变ui后版本)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

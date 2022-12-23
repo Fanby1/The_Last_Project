@@ -112,7 +112,7 @@
                     </form>
                 </div>
                 <div id="registerPage" class="tab-pane fade container">
-                    <form action="" id="2" method="post">
+                    <form action="singIn" id="2" method="post">
                         <div class="mb-3 mt-3">
                             <label for="account" class="form-label">账号:</label>
                             <input type="text" class="form-control" id="accountRegister"
@@ -124,7 +124,7 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">密码:</label>
                             <input type="password" class="form-control" id="passwordRegister"
-                                   placeholder="密码:" name="pswd" oninput="checkPasswordRegister()">
+                                   placeholder="密码:" name="password" oninput="checkPasswordRegister()">
                             <br>
                             <div class="card d-none" id="passwordWarningRegister">
                                 <div class="card-body" id="passwordWarningRegisterBody"></div>
@@ -394,7 +394,7 @@
         }
 
         var typelist = ["email", "phone", "id"];
-        typeVal = typelist[checkAccount() - 1];
+        typeVal = typelist[checkAccountRegister() - 1];
 
         for (let i = 0; i < type.length; i++) {
             if (type[i].value == typeVal) {

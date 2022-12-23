@@ -38,9 +38,12 @@ public class loginServlet extends HttpServlet {
             System.out.println(query);
             ResultSet resultSet = sql.query(query);
             if(resultSet.next()){
-                resp.sendRedirect(warName + "/" + account + ".jsp");
+                resp.sendRedirect(warName + "/" + identity[0] + ".jsp");
             }else{
-                resp.sendRedirect(warName);
+                resp.setContentType("text/html;charset=utf-8");
+                resp.getWriter().print("<script language='javascript'>" +
+                        "alert('账号或密码错误！');" +
+                        "window.location.href='index.jsp';</script>')");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

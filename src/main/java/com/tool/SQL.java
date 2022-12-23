@@ -75,4 +75,10 @@ public class SQL {
         ResultSet resultSet = statement.executeQuery(sql);
         return resultSet;
     }
+
+    public int update(String sql) throws SQLException {
+        Statement statement = connection.createStatement();
+        int count = statement.executeUpdate(sql);
+        return count;
+    }
 }

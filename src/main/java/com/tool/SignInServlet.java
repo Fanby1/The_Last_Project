@@ -4,6 +4,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,6 +33,11 @@ public class SignInServlet extends HttpServlet {
                 String update = "INSERT INTO " + identity[0] + " (" + type[0] + ", password)\n" +
                         "VALUES ('" + account + "','" + password + "');";
                 sql.update(update);
+                HttpSession session = req.getSession();
+                session.setAttribute("type",type[0]);
+                session.setAttribute("identity", identity[0]);
+                session.setAttribute("account", account);
+                session.setAttribute("password", password);
                 resp.setContentType("text/html;charset=utf-8");
                 resp.getWriter().print("<script language='javascript'>" +
                         "alert('注册成功！');" +

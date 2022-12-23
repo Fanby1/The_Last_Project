@@ -139,21 +139,24 @@
                             <div class="row" id="identityRegister">
                                 <div class="col-2 offset-6">
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="teacherRegister" name="identityRegister"
+                                        <input type="radio" class="form-check-input" id="teacherRegister"
+                                               name="identityRegister"
                                                value="teacher" checked>教师
                                         <label class="form-check-label" for="teacher"></label>
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="liaisonRegister" name="identityRegister"
+                                        <input type="radio" class="form-check-input" id="liaisonRegister"
+                                               name="identityRegister"
                                                value="liaison">联络员
                                         <label class="form-check-label" for="liaison"></label>
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="managerRegister" name="identityRegister"
+                                        <input type="radio" class="form-check-input" id="managerRegister"
+                                               name="identityRegister"
                                                value="manager">管理员
                                         <label class="form-check-label" for="manager"></label>
                                     </div>
@@ -171,13 +174,15 @@
                             <div class="row" id="typeRegister">
                                 <div class="col-3">
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="emailRegister" name="typeRegister"
+                                        <input type="radio" class="form-check-input" id="emailRegister"
+                                               name="typeRegister"
                                                value="email">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="phoneRegister" name="typeRegister"
+                                        <input type="radio" class="form-check-input" id="phoneRegister"
+                                               name="typeRegister"
                                                value="phone">
                                     </div>
                                 </div>
@@ -241,7 +246,7 @@
     var errorEmail2 = /[a-zA-Z_-]+/
     var erroPhone = /^[0-9]{11}$/;
 
-    function checkAccount(){
+    function checkAccount() {
         var account = document.getElementById("account");
         var accountWarning = document.getElementById("accountWarning");
         var accountWarningBody = document.getElementById("accountWarningBody");
@@ -303,11 +308,11 @@
         }
     }
 
-    function checkPassword(){
+    function checkPassword() {
         var password = document.getElementById("password").value.trim();
         var passwordWarning = document.getElementById("passwordWarning");
         var passwordWarningBody = document.getElementById("passwordWarningBody");
-        if(password.match(/[^a-zA-Z0-9]/g)){
+        if (password.match(/[^a-zA-Z0-9]/g)) {
             passwordWarning.className = "bg-danger text-white rounded";
             passwordWarningBody.innerHTML = "    您的密码包含非法字符，密码只能由数字与大小写字母组成";
             return false;
@@ -370,7 +375,7 @@
         }
     }
 
-    function checkRegister(){
+    function checkRegister() {
         var account = document.getElementById("accountRegister");
         var psw = document.getElementById("passwordRegister");
         var checkbox = document.getElementById("rememberRegister");
@@ -404,10 +409,12 @@
 
 
         if (checkbox.checked) {
-            saveForever(account.value.trim(), typeVal, psw.value.trim(), accountTypeVal);
+            saveStorage(account.value.trim(), typeVal, psw.value.trim(), accountTypeVal);
         } else {
             clear();
         }
+
+        saveSession(accountTypeVal);
     }
 
 
@@ -445,13 +452,14 @@
 
 
         if (checkbox.checked) {
-            saveForever(account.value.trim(), typeVal, psw.value.trim(), accountTypeVal);
+            saveStorage(account.value.trim(), typeVal, psw.value.trim(), accountTypeVal);
         } else {
             clear();
         }
+        saveSession(accountTypeVal);
     }
 
-    function saveForever(account, type, password, accountType) {
+    function saveStorage(account, type, password, accountType) {
         if (typeof (Storage) !== "undefined") {
             update("account", account);
             update("type", type);
@@ -460,6 +468,13 @@
         } else {
             alert("    您的浏览器不支持存储账户与密码，请放弃勾选‘记住我’选项再次登录");
         }
+    }
+
+    function saveSession(identity) {
+        if (sessionStorage.getItem("identity")) {
+            sessionStorage.removeItem("identity")
+        }
+        sessionStorage.setItem("identity", identity);
     }
 
     function update(key, val) {

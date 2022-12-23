@@ -12,6 +12,7 @@ public class Constant {
 
     public static final String sqlUserPwd = "200374";
 
+    //db的名字
     public static final String dbName = "nucleic acid testing";
 
     public static SQL sql = new SQL(sqlUserName,sqlUserPwd);

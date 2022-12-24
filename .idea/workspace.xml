@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="完成了userToken类简化了有关操作">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/UserToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/UserToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +196,7 @@
       <workItem from="1671424276366" duration="14459000" />
       <workItem from="1671602722851" duration="24120000" />
       <workItem from="1671762484254" duration="15432000" />
-      <workItem from="1671788434228" duration="12643000" />
+      <workItem from="1671788434228" duration="15742000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -303,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671858398637</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完成了userToken类简化了有关操作">
+      <created>1671859178160</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671859178160</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

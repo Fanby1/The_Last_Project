@@ -316,8 +316,10 @@
             passwordWarning.className = "bg-danger text-white rounded";
             passwordWarningBody.innerHTML = "    您的密码包含非法字符，密码只能由数字与大小写字母组成";
             return false;
+        }else{
+            passwordWarning.className = "bg-danger text-white rounded d-none";
+            return true;
         }
-        return true;
     }
 
     function checkPasswordRegister() {

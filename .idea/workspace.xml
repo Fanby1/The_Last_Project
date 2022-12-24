@@ -9,14 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="注释">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="完成了userToken类简化了有关操作">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/LiaisonFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/LiaisonFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/ManagerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/ManagerFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/SignInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/SignInServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/TeacherFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/TeacherFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/UserToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/UserToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/loginServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +196,7 @@
       <workItem from="1671424276366" duration="14459000" />
       <workItem from="1671602722851" duration="24120000" />
       <workItem from="1671762484254" duration="15432000" />
-      <workItem from="1671788434228" duration="11855000" />
+      <workItem from="1671788434228" duration="12643000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -301,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671789381104</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="完成了userToken类简化了有关操作">
+      <created>1671858398637</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671858398637</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +356,8 @@
     <MESSAGE value="登录与注册部分，不含session" />
     <MESSAGE value="登录与注册部分，包括session" />
     <MESSAGE value="注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="注释" />
+    <MESSAGE value="完成了userToken类简化了有关操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了userToken类简化了有关操作" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

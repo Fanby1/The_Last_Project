@@ -60,7 +60,7 @@ public class UserToken {
      * @throws IOException
      */
     boolean checkLogin() throws SQLException, ClassNotFoundException, IOException {
-        sql.setDbName("nucleic acid testing");
+        sql.setDbName(dbName);
         if(sql.connect() != 0){
             return false;
         }

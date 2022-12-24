@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ page import="com.tool.Constant" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="static com.tool.Constant.sql" %>
+<%@ page import="static com.tool.Constant.dbName" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>manager</title>
+    <title>manager_TeacherAccount</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -65,7 +68,56 @@
             </div>
         </div>
         <div class="col py-3">
-            Content area...
+            <h3 class="text-left"><mark>学院联络员账号</mark></h3>
+            <%
+                sql.setDbName(dbName);
+                sql.connect();
+                ResultSet rs = null;
+                rs = sql.query("select * from liaison");
+            %>
+            <div class="table-responsive">
+                <table class="table table-hover table-light">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>学院</th>
+                        <th>电话号码</th>
+                        <th>邮箱</th>
+                        <th>密码</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                        //遍历结果集
+                        while(rs.next()){
+                            String ret = rs.getString("ID");
+                            String ret1 = rs.getString("Institute");
+                            String ret2 = rs.getString("PhoneNumber");
+                            String ret3 = rs.getString("Email");
+                            String ret4 = rs.getString("Password");
+                    %>
+                    <tr>
+                        <td><%=ret%></td>
+                        <td><%=ret1%></td>
+                        <td><%=ret2%></td>
+                        <td><%=ret3%></td>
+                        <td><%=ret4%></td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-primary">
+                                    <a href="manager_editI.jsp?id=<%=ret%>&ins=<%=ret1%>&pn=<%=ret2%>&em=<%=ret3%>&pw=<%=ret4%>" style="color:white;text-decoration: none " )>编辑</a>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <a href="manager_deleteI.jsp?id=<%=ret%>" style="color:white;text-decoration: none "  onClick="return confirm('确认删除当前记录?')">删除</a>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

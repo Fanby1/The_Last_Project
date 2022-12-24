@@ -5,35 +5,6 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
 
-    <filter>
-        <filter-name>teacher</filter-name>
-        <filter-class>com.tool.TeacherFilter</filter-class>
-    </filter>
-
-
-    <filter>
-        <filter-name>liaison</filter-name>
-        <filter-class>com.tool.LiaisonFilter</filter-class>
-    </filter>
-
-    <filter>
-        <filter-name>manager</filter-name>
-        <filter-class>com.tool.ManagerFilter</filter-class>
-    </filter>
-
-    <filter-mapping>
-        <filter-name>teacher</filter-name>
-        <url-pattern>/teacher.jsp</url-pattern>
-    </filter-mapping>
-
-    <filter-mapping>
-        <filter-name>liaison</filter-name>
-        <url-pattern>/liaison.jsp</url-pattern>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>manager</filter-name>
-        <url-pattern>/manager.jsp</url-pattern>
-    </filter-mapping>
     <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>com.tool.loginServlet</servlet-class>

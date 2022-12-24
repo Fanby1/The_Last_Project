@@ -9,10 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="登录与注册部分，包括session">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="登录与注册部分，不含session">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Whitelun.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_Check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_InstituteAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_deleteI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_deleteT.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_editI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_editT.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_editbackI.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_editbackT.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manager_history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/SQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager_acount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manager_TeacherAccount.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +37,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -49,13 +64,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2Ix0sjHzos9ybr96UhDmCeaN4pZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -93,7 +101,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="The_last_project" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-18">
+    <configuration name="The_last_project" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.69" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-18">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/The_Last_Project_war_exploded/manager_TeacherAccount.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="The_Last_Project:war exploded">
@@ -196,8 +205,7 @@
       <workItem from="1671289959369" duration="29231000" />
       <workItem from="1671424276366" duration="14459000" />
       <workItem from="1671602722851" duration="24120000" />
-      <workItem from="1671762484254" duration="15432000" />
-      <workItem from="1671788434228" duration="928000" />
+      <workItem from="1671762484254" duration="15133000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -283,14 +291,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671774289937</updated>
     </task>
-    <task id="LOCAL-00013" summary="登录与注册部分，包括session">
-      <created>1671782259584</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1671782259584</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,8 +342,7 @@
     <MESSAGE value="实现记住用户功能" />
     <MESSAGE value="sql与部分servlet实现" />
     <MESSAGE value="登录与注册部分，不含session" />
-    <MESSAGE value="登录与注册部分，包括session" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录与注册部分，包括session" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录与注册部分，不含session" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

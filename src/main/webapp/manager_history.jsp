@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ page import="com.tool.Constant" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="static com.tool.Constant.sql" %>
+<%@ page import="static com.tool.Constant.dbName" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>manager</title>
+    <title>manager_history</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -65,7 +68,44 @@
             </div>
         </div>
         <div class="col py-3">
-            Content area...
+            <h3 class="text-left"><mark>历史打卡记录</mark></h3>
+            <%
+                sql.setDbName(dbName);
+                sql.connect();
+                ResultSet rs = null;
+                rs = sql.query("select * from teacher_test");
+            %>
+            <div class="table-responsive">
+                <table class="table table-hover table-light">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>姓名</th>
+                        <th>学院</th>
+                        <th>核酸检测结果</th>
+                        <th>所在地</th>
+                        <th>打卡日期</th>
+                        <th>打卡时间</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                        //遍历结果集
+                        while(rs.next()){
+                    %>
+                    <tr>
+                        <td><%=rs.getString("ID")%></td>
+                        <td><%=rs.getString("Name")%></td>
+                        <td><%=rs.getString("Institute")%></td>
+                        <td><%=rs.getString("Test")%></td>
+                        <td><%=rs.getString("Location")%></td>
+                        <td><%=rs.getString("CheckDate")%></td>
+                        <td><%=rs.getString("CheckTime")%></td>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

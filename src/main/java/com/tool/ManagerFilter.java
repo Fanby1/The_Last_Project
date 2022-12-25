@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import static com.tool.Constant.sql;
+import static com.tool.Constant.warName;
 
 public class ManagerFilter extends HttpFilter {
     @Override
@@ -22,7 +23,7 @@ public class ManagerFilter extends HttpFilter {
             res.setContentType("text/html;charset=utf-8");
             res.getWriter().print("<script language='javascript'>" +
                     "alert('您没有权限或者太久没有活动，请重新登陆');" +
-                    "window.location.href='/index.jsp';</script>')");
+                    "window.location.href='" + warName +"/index.jsp';</script>')");
         }
 
         try {
@@ -30,7 +31,7 @@ public class ManagerFilter extends HttpFilter {
                 res.setContentType("text/html;charset=utf-8");
                 res.getWriter().print("<script language='javascript'>" +
                         "alert('您没有权限或者太久没有活动，请重新登陆');" +
-                        "window.location.href='/index.jsp';</script>')");
+                        "window.location.href='" + warName +"/index.jsp';</script>')");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

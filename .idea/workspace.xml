@@ -9,9 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="已知bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB_Create" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Create" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/LiaisonFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/LiaisonFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/ManagerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/ManagerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/TeacherFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/TeacherFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison_account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_account.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher_admit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_admit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher_admitback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_admitback.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher_history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_history.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +88,8 @@
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp\teacher" />
+      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp\liaison" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\lib" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp" />
@@ -282,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671900892754</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="已知bug修复">
+      <created>1671954466393</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671954466393</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +352,8 @@
     <MESSAGE value="sql与部分servlet实现" />
     <MESSAGE value="登录与注册部分，不含session" />
     <MESSAGE value="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装" />
+    <MESSAGE value="已知bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="已知bug修复" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

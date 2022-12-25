@@ -10,8 +10,8 @@
   <title>manager_history</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/userCheck.js"></script>
 </head>
 <body>
@@ -60,7 +60,7 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="index.jsp">登出</a></li>
+            <li><a class="dropdown-item" href="../index.jsp">登出</a></li>
           </ul>
         </div>
       </div>

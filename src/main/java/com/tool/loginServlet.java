@@ -21,7 +21,7 @@ public class loginServlet extends HttpServlet {
         try {
             if(userToken.checkLogin()){
                 userToken.save(req);
-                resp.sendRedirect(warName + "/" + userToken.identity + ".jsp");
+                resp.sendRedirect(warName + "/" + userToken.identity + "/" + userToken.identity + ".jsp");
             }else{
                 resp.setContentType("text/html;charset=utf-8");
                 resp.getWriter().print("<script language='javascript'>" +

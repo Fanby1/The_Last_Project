@@ -10,8 +10,8 @@
     <title>manager_TeacherAccount</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/userCheck.js"></script>
 </head>
 <body>
@@ -19,7 +19,7 @@
     sql.setDbName(dbName);
     sql.connect();
     String i = request.getParameter("id");
-    String sql_del = "delete from liaison where ID ='"+i+"' ";
+    String sql_del = "delete from teacher where ID ='"+i+"' ";
     int flag = sql.update(sql_del);
     if(flag > 0)
     {

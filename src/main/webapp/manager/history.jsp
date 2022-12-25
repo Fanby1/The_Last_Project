@@ -7,11 +7,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>manager_TeacherAccount</title>
+    <title>manager_history</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/userCheck.js"></script>
 </head>
 <body>
@@ -30,20 +30,20 @@
                         </a>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
-                                <a href="manager_InstituteAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">学院账号</span></a>
+                                <a href="instituteAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">学院账号</span></a>
                             </li>
                             <li>
-                                <a href="manager_TeacherAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">教师账号</span></a>
+                                <a href="teacherAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">教师账号</span></a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="manager_Check.jsp" class="nav-link align-middle px-0">
+                        <a href="check.jsp" class="nav-link align-middle px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">全校打卡情况</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="manager_history.jsp" class="nav-link align-middle px-0">
+                        <a href="history.jsp" class="nav-link align-middle px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">历史记录</span>
                         </a>
                     </li>
@@ -62,28 +62,30 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="index.jsp">登出</a></li>
+                        <li><a class="dropdown-item" href="../index.jsp">登出</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col py-3">
-            <h3 class="text-left"><mark>学院联络员账号</mark></h3>
+            <h3 class="text-left"><mark>历史打卡记录</mark></h3>
             <%
                 sql.setDbName(dbName);
                 sql.connect();
                 ResultSet rs = null;
-                rs = sql.query("select * from liaison");
+                rs = sql.query("select * from check");
             %>
             <div class="table-responsive">
                 <table class="table table-hover table-light">
                     <thead>
                     <tr>
                         <th>ID</th>
+                        <th>姓名</th>
                         <th>学院</th>
-                        <th>电话号码</th>
-                        <th>邮箱</th>
-                        <th>密码</th>
+                        <th>核酸检测结果</th>
+                        <th>所在地</th>
+                        <th>打卡日期</th>
+                        <th>打卡时间</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -91,29 +93,15 @@
                     <%
                         //遍历结果集
                         while(rs.next()){
-                            String ret = rs.getString("ID");
-                            String ret1 = rs.getString("Institute");
-                            String ret2 = rs.getString("PhoneNumber");
-                            String ret3 = rs.getString("Email");
-                            String ret4 = rs.getString("Password");
                     %>
                     <tr>
-                        <td><%=ret%></td>
-                        <td><%=ret1%></td>
-                        <td><%=ret2%></td>
-                        <td><%=ret3%></td>
-                        <td><%=ret4%></td>
-                        <td>
-                            <div class="btn-group btn-group-sm">
-                                <button type="button" class="btn btn-primary">
-                                    <a href="manager_editI.jsp?id=<%=ret%>&ins=<%=ret1%>&pn=<%=ret2%>&em=<%=ret3%>&pw=<%=ret4%>" style="color:white;text-decoration: none " )>编辑</a>
-                                </button>
-                                <button type="button" class="btn btn-danger">
-                                    <a href="manager_deleteI.jsp?id=<%=ret%>" style="color:white;text-decoration: none "  onClick="return confirm('确认删除当前记录?')">删除</a>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
+                        <td><%=rs.getString("ID")%></td>
+                        <td><%=rs.getString("Name")%></td>
+                        <td><%=rs.getString("Institute")%></td>
+                        <td><%=rs.getString("Test")%></td>
+                        <td><%=rs.getString("Location")%></td>
+                        <td><%=rs.getString("CheckDate")%></td>
+                        <td><%=rs.getString("CheckTime")%></td>
                     <%}%>
                     </tbody>
                 </table>

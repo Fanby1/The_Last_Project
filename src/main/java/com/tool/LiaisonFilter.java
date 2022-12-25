@@ -21,7 +21,7 @@ public class LiaisonFilter extends HttpFilter {
             res.setContentType("text/html;charset=utf-8");
             res.getWriter().print("<script language='javascript'>" +
                     "alert('您没有权限或者太久没有活动，请重新登陆');" +
-                    "window.location.href='index.jsp';</script>')");
+                    "window.location.href='/index.jsp';</script>')");
         }
 
         try {
@@ -29,7 +29,7 @@ public class LiaisonFilter extends HttpFilter {
                 res.setContentType("text/html;charset=utf-8");
                 res.getWriter().print("<script language='javascript'>" +
                         "alert('您没有权限或者太久没有活动，请重新登陆');" +
-                        "window.location.href='index.jsp';</script>')");
+                        "window.location.href='/index.jsp';</script>')");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -15,9 +15,9 @@ public class SignInServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserToken userToken = new UserToken(req);
+        userToken.display();
         try {
-
-            if(userToken.checkSignIn()){
+            if(!userToken.checkSignIn()){
                 resp.setContentType("text/html;charset=utf-8");
                 resp.getWriter().print("<script language='javascript'>" +
                         "alert('您输入的账号已经被注册，请重新输入！');" +
@@ -29,7 +29,7 @@ public class SignInServlet extends HttpServlet {
                 resp.setContentType("text/html;charset=utf-8");
                 resp.getWriter().print("<script language='javascript'>" +
                         "alert('注册成功！');" +
-                        "window.location.href='" + userToken.identity + ".jsp';</script>')");
+                        "window.location.href='" + warName +"/" + userToken.identity + "/" + userToken.identity + ".jsp';</script>')");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

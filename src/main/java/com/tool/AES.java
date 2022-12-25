@@ -374,6 +374,7 @@ public class AES {
         int k = begin;
         for(int i = 0; i < 4; i++)
             for(int j = 0; j < 4; j++) {
+                System.out.println(array[j][i]);
                 str[k] = (char) array[j][i];
                 k++;
             }
@@ -393,7 +394,7 @@ public class AES {
      * 参数 plen: 明文的长度。
      * 参数 key: 密钥的字符串数组。
      */
-    public void aes(String p){
+    public String aes(String p){
         int keylen = key.length();
         char[] keybuf = key.toCharArray();
         int plen = p.length();
@@ -407,14 +408,15 @@ public class AES {
         plen = p.length();
         char[] pbuf = p.toCharArray();
 
-        if(checkKeyLen(keylen) != 0) {
+        if(checkKeyLen(keylen) == 0) {
             System.out.printf("密钥字符长度错误！长度必须为16、24和32。当前长度为%d\n",keylen);
-            return;
+            return "";
         }
 
         extendKey(keybuf);//扩展密钥
         int[][] pArray = new int[4][4];
 
+        String res = "";
         for(int k = 0; k < plen; k += 16) {
             convertToIntArray(pbuf, k, pArray);
 
@@ -439,8 +441,14 @@ public class AES {
 
             addRoundKey(pArray, 10);
 
-            convertArrayToStr(pArray, pbuf, k);
+            if(k != 0){
+                res += ",";
+            }
+            res += codeString(pArray,res);
+
         }
+
+        return res;
     }
     /**
      * 根据索引从逆S盒中获取值
@@ -548,18 +556,21 @@ public class AES {
      * 参数 clen: 密文的长度。
      * 参数 key: 密钥的字符串数组。
      */
-    public void deAes(String c) {
+    public String deAes(String c) {
         int keylen = key.length();
         char [] keybuf = key.toCharArray();
-        int clen = c.length();
+        String buffer[] = c.split(",");
+
+        int clen = buffer.length;
         if(clen == 0 || clen % 16 != 0) {
             System.out.printf("密文字符长度必须为16的倍数！现在的长度为%d\n",clen);
-            return;
+            return "";
         }
-        char[] cbuf = c.toCharArray();
-        if(checkKeyLen(keylen) != 0) {
+        char cbuf[] = new char[clen];
+        decodeString(cbuf,buffer);
+        if(checkKeyLen(keylen) == 0) {
             System.out.printf("密钥字符长度错误！长度必须为16、24和32。当前长度为%d\n",keylen);
-            return;
+            return "";
         }
 
         extendKey(keybuf);//扩展密钥
@@ -591,6 +602,27 @@ public class AES {
 
             convertArrayToStr(cArray, cbuf, k);
 
+        }
+
+        return new String(cbuf);
+    }
+
+    private String codeString(int array[][], String res){
+        for(int i = 0; i < 4; i++)
+            for(int j = 0; j < 4; j++) {
+                if(i == 0 && j == 0){
+                    res += array[j][i];
+                }else {
+                    res += "," + array[j][i];
+                }
+            }
+        return res;
+    }
+
+    private void decodeString(char cbuf[], String[] res){
+        for(int i = 0;i < res.length;i++){
+            System.out.println(i + ":" + res[i]);
+            cbuf[i] = (char) (int) Integer.parseInt(res[i]);
         }
     }
 

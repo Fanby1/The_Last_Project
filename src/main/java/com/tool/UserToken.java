@@ -6,14 +6,15 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static com.tool.Constant.dbName;
-import static com.tool.Constant.sql;
+import static com.tool.Constant.*;
 
 /**
  * 此类目的是简化有关user信息的操作
  */
 public class UserToken {
     String account,password,type,identity;
+
+    AES aes = new AES(key);
 
     /**
      * 构造函数 基于session完成，得到一个拥有在当前会话下的全部用户信息的token
@@ -47,8 +48,10 @@ public class UserToken {
     UserToken(HttpServletRequest req){
         account = req.getParameter("account");
         password = req.getParameter("password");
-        identity = req.getParameterValues("identity")[0];
-        type = req.getParameterValues("type")[0];
+        password = aes.aes(password);
+        //System.out.println(aes.deAes(password));
+        identity = req.getParameterValues("identity" + (isSignIn(req) ? "Register" : ""))[0];
+        type = req.getParameterValues("type" + (isSignIn(req) ? "Register" : ""))[0];
     }
 
     /**
@@ -66,9 +69,9 @@ public class UserToken {
         }
         String query ="select * from " + identity + " where " + type + " = '" + account + "' and  password = '" + password + "'";
         System.out.println(query);
+        System.out.println(password);
         ResultSet resultSet = sql.query(query);
         while (resultSet.next()){
-            System.out.println("yes");
             return true;
         }
         return false;
@@ -123,11 +126,21 @@ public class UserToken {
     }
 
     /**
+     * 判断是注册还是登录
+     */
+
+    boolean isSignIn(HttpServletRequest req){
+        String url = req.getRequestURI();
+        String[] list = url.split("/");
+        return list[list.length - 1].equals("singIn");
+    }
+
+    /**
      * 调试时使用
      */
     void display(){
         System.out.println("account : " +  account);
-        System.out.println("password : " + password);
+        System.out.println("password : " + aes.deAes(password));
         System.out.println("identity : " + identity);
         System.out.println("type : " + type);
     }

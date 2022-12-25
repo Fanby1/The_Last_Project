@@ -10,8 +10,8 @@
   <title>manager_TeacherAccount</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/userCheck.js"></script>
 </head>
 <body>
@@ -30,20 +30,20 @@
             </a>
             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
               <li class="w-100">
-                <a href="manager_InstituteAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">学院账号</span></a>
+                <a href="instituteAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">学院账号</span></a>
               </li>
               <li>
-                <a href="manager_TeacherAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">教师账号</span></a>
+                <a href="teacherAccount.jsp" class="nav-link px-0"> <span class="d-none d-sm-inline">教师账号</span></a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="manager_Check.jsp" class="nav-link align-middle px-0">
+            <a href="check.jsp" class="nav-link align-middle px-0">
               <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">全校打卡情况</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="manager_history.jsp" class="nav-link align-middle px-0">
+            <a href="history.jsp" class="nav-link align-middle px-0">
               <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">历史记录</span>
             </a>
           </li>
@@ -62,7 +62,7 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="index.jsp">登出</a></li>
+            <li><a class="dropdown-item" href="../index.jsp">登出</a></li>
           </ul>
         </div>
       </div>
@@ -125,7 +125,7 @@
           </div>
         </div>
         <%--隐式表单储存数据上传--%>
-        <form name = "frmApp" action = "manager_editbackI.jsp" id= "frmAppId" mothed= "post" />
+        <form name = "frmApp" action = "editBackLiaison.jsp" id= "frmAppId" mothed= "post" />
         <input id= "a" type= "hidden" name = "id" >
         <input id= "b" type= "hidden" name = "pn" >
         <input id= "c" type= "hidden" name = "em" >

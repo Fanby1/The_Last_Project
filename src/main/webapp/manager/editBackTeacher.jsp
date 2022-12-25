@@ -10,8 +10,8 @@
   <title>manager_TeacherAccount</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/userCheck.js"></script>
 </head>
 <body>
@@ -19,12 +19,14 @@
   sql.setDbName(dbName);
   sql.connect();
   String tid = request.getParameter("id");
-  String email = request.getParameter("em");
+  String name1 = request.getParameter("name");
+  String gender = request.getParameter("gender");
+  String age = request.getParameter("age");
   String pn = request.getParameter("pn");
+  String em = request.getParameter("em");
   String pw = request.getParameter("pw");
   String ins = request.getParameter("ins");
-  out.print(tid);
-  String sql_del = "update liaison set Email ='"+email+"',PhoneNumber ='"+pn+"',Password ='"+pw+"',Institute ='"+ins+"'where ID = '"+tid+"'";
+  String sql_del = "update teacher set Name ='"+name1+"',Email ='"+em+"',PhoneNumber ='"+pn+"',Password ='"+pw+"',Institute ='"+ins+"',Age ='"+age+"',Gender ='"+gender+"'where ID = '"+tid+"'";
   int flag = sql.update(sql_del);
   if(flag > 0)
   {

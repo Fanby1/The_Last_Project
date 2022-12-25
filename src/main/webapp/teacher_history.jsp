@@ -76,7 +76,7 @@
         ResultSet rs = null;
         rs1 = sql.query("select * from teacher where '"+tp+"' = '"+ac+"'");
         String id = rs1.getString("id");
-        rs = sql.query("select * from teacher_test where Id = '"+id+"'");
+        rs = sql.query("select * from teacher_test_tmp where Id = '"+id+"'");
       %>
       <div class="table-responsive">
         <table class="table table-hover table-light">

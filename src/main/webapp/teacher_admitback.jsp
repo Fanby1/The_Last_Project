@@ -25,7 +25,7 @@
     String inloc = request.getParameter("inputloc");
     String indate = request.getParameter("inputdate");
     String intime = request.getParameter("inputtime");
-    String sql_insert = "insert into teacher_test values('"+inid+"','"+inname+"','"+inins+"','"+intest+"','"+inloc+"','"+indate+"','"+intime+"')";
+    String sql_insert = "insert into teacher_test_tmp values('"+inid+"','"+inname+"','"+inins+"','"+intest+"','"+inloc+"','"+indate+"','"+intime+"')";
     int flag = sql.update(sql_insert);
     if(flag > 0)
     {

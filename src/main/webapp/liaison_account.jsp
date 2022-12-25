@@ -94,8 +94,12 @@
                         sql.setDbName(dbName);
                         sql.connect();
                         ResultSet rs = null;
+                        ResultSet rs1 = null;
                         String type = session.getAttribute("type").toString();
-                        out.print(type);
+                        String account = session.getAttribute("account").toString();
+                        rs1 = sql.query("select * from liaison where '"+type+"' = '"+account+"'");
+                        String ins = rs.getString("Institute");
+                        rs = sql.query("select * from teacher where Institute = '"+ins+"'");
                     %>
                     <%
                         //遍历结果集

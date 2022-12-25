@@ -50,6 +50,8 @@ public class UserToken {
         password = req.getParameter("password");
         password = aes.aes(password);
         //System.out.println(aes.deAes(password));
+        System.out.println(isSignIn(req));
+        System.out.println("type" + (isSignIn(req) ? "Register" : ""));
         identity = req.getParameterValues("identity" + (isSignIn(req) ? "Register" : ""))[0];
         type = req.getParameterValues("type" + (isSignIn(req) ? "Register" : ""))[0];
     }

@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>com.tool.loginServlet</servlet-class>
+        <servlet-class>com.tool.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>singIn</servlet-name>

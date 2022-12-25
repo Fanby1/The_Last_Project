@@ -73,7 +73,7 @@
                 sql.setDbName(dbName);
                 sql.connect();
                 ResultSet rs = null;
-                rs = sql.query("select * from check");
+                rs = sql.query("select * from teacher_test");
             %>
             <div class="table-responsive">
                 <table class="table table-hover table-light">

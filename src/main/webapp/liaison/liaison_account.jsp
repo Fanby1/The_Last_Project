@@ -98,7 +98,10 @@
                         String type = session.getAttribute("type").toString();
                         String account = session.getAttribute("account").toString();
                         rs1 = sql.query("select * from liaison where '"+type+"' = '"+account+"'");
-                        String ins = rs.getString("Institute");
+                        String ins = "";
+                        while (rs1.next()) {
+                            ins = rs1.getString("Institute");
+                        }
                         rs = sql.query("select * from teacher where Institute = '"+ins+"'");
                     %>
                     <%

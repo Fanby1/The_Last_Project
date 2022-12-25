@@ -74,11 +74,14 @@
                 String ac = session.getAttribute("account").toString();
                 out.print(tp);
                 out.print(ac);
-                String sq = "select * from teacher where '"+tp+"' = '"+ac+"'";
+                String sq = "select * from teacher where "+tp+" = '"+ac+"'";
                 ResultSet rs = sql.query(sq);
-                String id = rs.getString("id");
-                String n = rs.getString("Name");
-                String ins = rs.getString("Institute");
+                String id = "", n = "", ins = "";
+                while (rs.next()) {
+                    id = rs.getString("id");
+                    n = rs.getString("Name");
+                    ins = rs.getString("Institute");
+                }
             %>
             <form action="teacher_admitback.jsp">
                 <div class="row mb-3">

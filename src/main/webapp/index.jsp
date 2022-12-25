@@ -176,20 +176,20 @@
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" id="emailRegister"
                                                name="typeRegister"
-                                               value="Email">
+                                               value="email">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" id="phoneRegister"
                                                name="typeRegister"
-                                               value="PhoneNumber">
+                                               value="phone">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" id="idRegister" name="typeRegister"
-                                               value="ID">
+                                               value="id">
                                     </div>
                                 </div>
                             </div>
@@ -405,9 +405,12 @@
 
         for (let i = 0; i < type.length; i++) {
             if (type[i].value == typeVal) {
+                alert(i);
                 type[i].checked = true;
             }
         }
+
+        alert(typeVal);
 
 
         if (checkbox.checked) {

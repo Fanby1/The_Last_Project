@@ -75,7 +75,10 @@
         ResultSet rs1 = null;
         ResultSet rs = null;
         rs1 = sql.query("select * from teacher where '"+tp+"' = '"+ac+"'");
-        String id = rs1.getString("id");
+        String id = "";
+        while (rs1.next()) {
+           id = rs1.getString("id");
+        }
         rs = sql.query("select * from teacher_test_tmp where Id = '"+id+"'");
       %>
       <div class="table-responsive">

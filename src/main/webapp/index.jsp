@@ -176,20 +176,20 @@
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" id="emailRegister"
                                                name="typeRegister"
-                                               value="email">
+                                               value="Email">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" id="phoneRegister"
                                                name="typeRegister"
-                                               value="phone">
+                                               value="PhoneNumber">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" id="idRegister" name="typeRegister"
-                                               value="id">
+                                               value="ID">
                                     </div>
                                 </div>
                             </div>
@@ -489,6 +489,7 @@
             }
         }
     }
+
 </script>
 </body>
 </html>

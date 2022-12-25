@@ -9,9 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="修改了check表，简化打卡数据">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/liaison_account.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/liaison_check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/teacher_admit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/teacher_admitback.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/teacher_history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB_Create" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Create" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +86,7 @@
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git-space\The_Last_Project\The_Last_Project\src\main\webapp" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\lib" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp" />
@@ -86,7 +94,7 @@
   </component>
   <component name="RunManager">
     <configuration name="The_last_project" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.69" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-18">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/The_Last_Project_war_exploded/manager_TeacherAccount.jsp" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/The_Last_Project_war_exploded/index.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="The_Last_Project:war exploded">
@@ -190,6 +198,7 @@
       <workItem from="1671424276366" duration="14459000" />
       <workItem from="1671602722851" duration="24120000" />
       <workItem from="1671762484254" duration="15133000" />
+      <workItem from="1671934754573" duration="12597000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -282,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671900892754</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="修改了check表，简化打卡数据">
+      <created>1671901424930</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671901424930</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +350,8 @@
     <MESSAGE value="sql与部分servlet实现" />
     <MESSAGE value="登录与注册部分，不含session" />
     <MESSAGE value="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装" />
+    <MESSAGE value="修改了check表，简化打卡数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了check表，简化打卡数据" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

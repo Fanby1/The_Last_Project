@@ -131,7 +131,7 @@
           //内容有改动随时更新数据
           function changeContent(){
             //存放各个属性数组的数组
-            var arrays = new Array();
+            let arrays = new Array();
 
 
             var idArray = new Array();

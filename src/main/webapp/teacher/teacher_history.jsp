@@ -106,6 +106,7 @@
             <td><%=rs.getString("CheckDate")%></td>
             <td><%=rs.getString("CheckTime")%></td>
               <%}%>
+            <td>
           </tbody>
         </table>
       </div>

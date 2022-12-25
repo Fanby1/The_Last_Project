@@ -74,66 +74,135 @@
       </div>
     </div>
     <div class="col py-3">
-      <div class="table-responsive">
+      <%
+        sql.setDbName(dbName);
+        sql.connect();
+        String tp = session.getAttribute("type").toString();
+        String ac = session.getAttribute("account").toString();
+        ResultSet rs1 = sql.query("select * from liaison where '"+tp+"' = '"+ac+"'");
+        rs1.next();
+        String ins = rs1.getString("Institute");
+        ResultSet rs = sql.query("select * from teacher_test_tmp where Institute = '"+ins+"'");
+      %>
+      <div class="table-responsive" id="myTable">
         <table class="table table-hover table-light">
           <thead>
           <tr>
             <th>ID</th>
             <th>姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
             <th>学院</th>
-            <th>电话</th>
-            <th>邮箱</th>
-            <th>密码</th>
+            <th>核酸检测结果</th>
+            <th>是否在四川省内</th>
+            <th>打卡日期</th>
+            <th>打卡时间</th>
             <th></th>
           </tr>
           </thead>
           <tbody>
           <%
-            sql.setDbName(dbName);
-            sql.connect();
-            ResultSet rs = null;
-            String ins = request.getParameter("institute");
-            rs = sql.query("select * from teacher where Institute = ' "+ins+" '");
-          %>
-          <%
             //遍历结果集
             while(rs.next()){
-              String ret = rs.getString("ID");
-              String ret1 = rs.getString("Name");
-              String ret2 = rs.getString("Gender");
-              String ret3 = rs.getString("Age");
-              String ret4 = rs.getString("Institute");
-              String ret5 = rs.getString("PhoneNumber");
-              String ret6 = rs.getString("Email");
-              String ret7 = rs.getString("Password");
           %>
           <tr>
-            <td><%=ret%></td>
-            <td><%=ret1%></td>
-            <td><%=ret2%></td>
-            <td><%=ret3%></td>
-            <td><%=ret4%></td>
-            <td><%=ret5%></td>
-            <td><%=ret6%></td>
-            <td><%=ret7%></td>
+            <td id="a"><%=rs.getString("id")%></td>
+            <td id="b"><%=rs.getString("Name")%></td>
+            <td id="c"><%=rs.getString("Institute")%></td>
+            <td id="d"><%=rs.getString("Test")%></td>
+            <td id="e"><%=rs.getString("Location")%></td>
+            <td id="f"><%=rs.getString("CheckDate")%></td>
+            <td id="g"><%=rs.getString("CheckTime")%></td>
+              <%}%>
             <td>
-              <div class="btn-group btn-group-sm">
-                <button type="button" class="btn btn-primary">
-                  <a href="manager_editT.jsp?id=<%=ret%>&name=<%=ret1%>&gender=<%=ret2%>&age=<%=ret3%>&institute=<%=ret4%>&pn=<%=ret5%>&email=<%=ret6%>&pw=<%=ret7%>" style="color:white;text-decoration: none " )>编辑</a>
-                </button>
-                <button type="button" class="btn btn-danger">
-                  <a href="manager_deleteT.jsp?id=<%=ret%>" style="color:white;text-decoration: none " onClick="return confirm('确认删除当前记录?')">删除</a>
-                </button>
+              <div>
+                <input type="checkbox" id="h">
+                <label for="h">异常</label>
               </div>
             </td>
           </tr>
-          <%}%>
           </tbody>
         </table>
-      </div>
-    </div>
+        <div class="d-grid gap-2">
+          <input type="hidden" id="hd1" name="hd1"/>
+          <button class="btn btn-primary" type="button">提交</button>
+        </div>
+        <script type="text/javascript">
+          //页面加载完后加载changeContent()函数，目的：是为了当页面加载完后，能及时的把表单中的数据传递到隐藏域中。
+          window.οnlοad=changeContent();
+          //内容有改动随时更新数据
+          function changeContent(){
+            //存放各个属性数组的数组
+            var arrays = new Array();
+
+
+            var idArray = new Array();
+            var nameArray = new Array();
+            var insArray = new Array();
+            var testArray = new Array();
+            var locArray  = new Array()
+            var dateArray  = new Array();
+            var timeArray  = new Array();
+            var warnArray  = new Array();
+
+
+            //表格的列数
+            var cellNums = document.getElementById("myTable").rows[0].cells.length;
+
+            //表格的行数
+            var rowNums = document.getElementById("myTable").rows.length;
+
+
+            for(var m=1;m<rowNums;m++){
+              idArray[m-1] = document.getElementById("myTable").rows[m].cells[0].getElementById("a")[0].value;
+            }
+
+
+            for(var m=1;m<rowNums;m++){
+              nameArray[m-1] = document.getElementById("myTable").rows[m].cells[1].getElementById("b")[0].value;
+            }
+
+
+            for(var m=1;m<rowNums;m++){
+              insArray[m-1] = document.getElementById("myTable").rows[m].cells[2].getElementById("c")[0].value;
+            }
+
+
+            for(var m=1;m<rowNums;m++){
+              testArray[m-1] = document.getElementById("myTable").rows[m].cells[3].getElementById("d")[0].value;
+            }
+
+
+            for(var m=1;m<rowNums;m++){
+              locArray[m-1] = document.getElementById("myTable").rows[m].cells[4].getElementById("e")[0].value;
+            }
+            for(var m=1;m<rowNums;m++){
+              dateArray[m-1] = document.getElementById("myTable").rows[m].cells[5].getElementById("f")[0].value;
+            }
+            for(var m=1;m<rowNums;m++){
+              timeArray[m-1] = document.getElementById("myTable").rows[m].cells[6].getElementById("g")[0].value;
+            }
+            for(var m=1;m<rowNums;m++){
+              warnArray[m-1] = document.getElementById("myTable").rows[m].cells[7].getElementById("h")[0].value;
+            }
+
+
+            //将数组中的数据放到json对象中
+            var data = [];
+            for(var i=0;i<nameArray.length;i++){
+              data.push({"id":idArray[i],
+                "name":nameArray[i],
+                "institute":insArray[i],
+                "test":testArray[i],
+                "location":locArray[i],
+                "date":dateArray[i],
+                "time":timeArray[i],
+                "warning":warnArray[i]});
+            }
+            //将json对象转为json字符串，前后台传递是以字符串的形式
+            var strdata = JSON.stringify(data);
+            //将strdata传递到html隐藏域中
+            document.getElementById("hd1").value = strdata;
+          }
+        </script>
   </div>
 </div>
 </body>

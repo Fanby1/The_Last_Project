@@ -9,18 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="已知bug修复">
+    <list default="true" id="4ea59bc7-ef3c-4eb4-af23-4dcbbf099a2e" name="Changes" comment="增加表teacher_test_tmp存放教师提交打卡数据，修改了教师查看的打卡数据来源">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_checkBack.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/LiaisonFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/LiaisonFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/ManagerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/ManagerFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/TeacherFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tool/TeacherFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison_account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_check.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher_admit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_admit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher_admitback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_admitback.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher_history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison/liaison.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/liaison/liaison_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacher/teacher_history.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +32,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -88,16 +81,15 @@
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp\teacher" />
-      <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp\liaison" />
+      <recent name="D:\git-space\The_Last_Project\The_Last_Project\src\main\webapp" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\lib" />
       <recent name="C:\Users\fanby\IdeaProjects\The_Last_Project\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="The_last_project" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-18">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/The_Last_Project_war_exploded" />
+    <configuration name="The_last_project" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.69" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-18">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/The_Last_Project_war_exploded/liaison/liaison_check.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="The_Last_Project:war exploded">
@@ -201,6 +193,7 @@
       <workItem from="1671424276366" duration="14459000" />
       <workItem from="1671602722851" duration="24120000" />
       <workItem from="1671762484254" duration="15133000" />
+      <workItem from="1671934754573" duration="14950000" />
     </task>
     <task id="LOCAL-00001" summary="所有文件框架，四个页面">
       <created>1671168945566</created>
@@ -293,14 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671900892754</updated>
     </task>
-    <task id="LOCAL-00014" summary="已知bug修复">
-      <created>1671954466393</created>
+    <task id="LOCAL-00014" summary="修改了check表，简化打卡数据">
+      <created>1671901424930</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1671954466393</updated>
+      <updated>1671901424930</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="teacher打卡和打卡记录查询的实现">
+      <created>1671951477076</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671951477076</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,8 +352,9 @@
     <MESSAGE value="sql与部分servlet实现" />
     <MESSAGE value="登录与注册部分，不含session" />
     <MESSAGE value="manager功能基本完成（全校打卡情况可视化未实现）&#10;由于时间原因很多可封装方法未封装" />
-    <MESSAGE value="已知bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="已知bug修复" />
+    <MESSAGE value="修改了check表，简化打卡数据" />
+    <MESSAGE value="teacher打卡和打卡记录查询的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="teacher打卡和打卡记录查询的实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
